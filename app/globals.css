@@ -1,12 +1,23 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
+/* Register Tailwind plugins in tailwind.config.js instead:
+   module.exports = {
+     plugins: [require('@tailwindcss/typography')],
+   };
+*/
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
+/*
+  `@theme`는 표준 CSS at-rule이 아닙니다. 일부 에디터나 플러그인이
+  삽입했을 수 있어 "Unknown at rule @theme" 경고가 발생합니다.
+  아래와 같이 data-attribute 선택자를 사용하면 동일한 목적(테마 범위)
+  을 안전하게 달성할 수 있습니다.
+*/
+
+[data-theme="inline"] {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
