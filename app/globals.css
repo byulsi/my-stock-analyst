@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 /* Register Tailwind plugins in tailwind.config.js instead:
    module.exports = {
      plugins: [require('@tailwindcss/typography')],
